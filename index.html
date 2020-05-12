@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #000000;
-}
-
-li {
-  float: left;
-font-family:calibri;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #FFD700;
-}
-</style>
+<head>
+    <title>Store form data in .txt file</title>
+</head>
 <body>
-<h1 style="font-family:calibri">All about Andre</h1>
-<ul>
-  <li><a href="#home">About Me</a></li>
-  <li><a href="#news">Contact Info and Links</a></li>
-  <li><a href="#contact">Projects</a></li>
-  <li><a href="#about">Experience</a></li>
-</ul>
-<img src="Eric_Andre.jpg" alt="Big Bean">
+    <form method="post">
+        Enter Your Text Here:<br>
+        <input type="text" name="textdata"><br>
+        <input type="submit" name="submit">
+
+    </form>
 </body>
 </html>
+
+<?php
+
+if(isset($_POST['textdata']))
+{
+$data=$_POST['textdata'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+echo $data
+}
+?>
