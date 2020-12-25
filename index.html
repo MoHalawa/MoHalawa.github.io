@@ -5,20 +5,98 @@
 </head>
 
 <body>
-<div class ="box">
 
-	<img style="width:100%" src="everyday.gif" alt="everyday"/> 
+<div class ="box">
+	
 	<div class = "text">
 		<h1 class ="top"><a href="index.html">Bran's R Us</a></h1> 
 	</div>
+
+	<img  class ="hide" style="width:100%" src="everyday.gif" alt="everyday"/> 
+</div>
+<div id="navbar">
+  <a href="#welcome">Home</a>
+  <a href="#products">Products</a>
+ <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
 </div>
 
-<ul class = "header">
-  <li class ="active"><a href="#index.html">Home</a></li> <!--{navigation bar}-->
-  <li class ="header"><a href="product_page.html">Products</a></li> 
-  <li class ="header"><a href="#placeholder">Placeholder</a></li>
-  <li class ="header"><a href="#placeholder">Placeholder</a></li>
-</ul>
+<article id="welcome" class="top">
+<article class ="nest-top">
+
+<h1>Welcome</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</article>
+</article>
+<br>
+
+<article id="products">
+<article class ="nest">
+
+<h1>Products</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</article>
+</article>
+<br>
+
+<article id="about">
+<article class ="nest">
+
+<h1>About Us</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</article>
+</article>
+<br>
+
+<article id="contact">
+<article class ="nest">
+
+<h1>Contact</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</article>
+</article>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>
 
